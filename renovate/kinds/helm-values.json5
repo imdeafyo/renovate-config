@@ -3,14 +3,15 @@
 
   "helm-values": {
     "fileMatch": [
-      "(^|/)clusters/.+\\-values\\.ya?ml$",
-      "(^|/)kubernetes/.+\\-values\\.ya?ml$",
-      "(^|/)repositories/.+\\-values\\.ya?ml$",
-      "(^|/)charts/.+\\-values\\.ya?ml$"
+      "(^|/)clusters/.+\\-values\\.ya?ml$",      // Match *-values.yaml, *-values.yml, or *-values.yaml.j2 in clusters
+      "(^|/)kubernetes/.+\\-values\\.ya?ml$",    // Match *-values.yaml, *-values.yml, or *-values.yaml.j2 in kubernetes
+      "(^|/)repositories/.+\\-values\\.ya?ml$",  // Match *-values.yaml, *-values.yml, or *-values.yaml.j2 in repositories
+      "(^|/)charts/.+\\-values\\.ya?ml$"         // Match *-values.yaml, *-values.yml, or *-values.yaml.j2 in charts
     ],
     "enabled": true, // Enable image reference updates in values.yaml
     "updateTypes": ["major", "minor", "patch", "digest", "pin"], // Allow updates for all version types
     "semanticCommitScope": "helm",
+    "bumpVersion": true,
     "branchPrefix": "renovate/helm-values-",      // Moved to helm-values scope
   }
 
