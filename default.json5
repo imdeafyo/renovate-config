@@ -13,7 +13,7 @@
     prHourlyLimit: 0,
     semanticCommits: 'enabled',
     "suppressNotifications": ["prEditedNotification", "prIgnoreNotification"],
-     "extends": [
+    "globalExtends": [
         "config:recommended",
         "github>imdeafyo/renovate-config//renovate/updates/lockfile.json5",
         "github>imdeafyo/renovate-config//renovate/updates/pin.json5",
